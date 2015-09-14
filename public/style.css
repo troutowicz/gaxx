@@ -1,0 +1,32 @@
+body {
+  background-color: #F2F2F2;
+}
+
+#title {
+  font-size: 2em;
+}
+
+#filterBox {
+  position: absolute;
+  top: 60px;
+}
+
+#chart {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  z-index: -1;
+}
+
+#legend ul {
+  list-style: none;
+}
+
+#legend ul li span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 2px;
+}

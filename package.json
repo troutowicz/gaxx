@@ -1,0 +1,35 @@
+{
+  "name": "gaxx",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify -s bundle index.js -t babelify > public/bundle.js",
+    "lint": "eslint actions/ components/ containers/ reducers/ store/ index.js server.js",
+    "start": "babel-node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tim Routowicz <troutowicz@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "babel": "^5.8.23",
+    "chart.js": "nnnick/Chart.js#7fcd4dc",
+    "express": "^4.13.3",
+    "predb-scraper": "troutowicz/predb-scraper",
+    "react": "^0.13.3",
+    "react-chartjs": "troutowicz/react-chartjs#bfe8a5a",
+    "react-redux": "^2.1.2",
+    "react-stampit": "^0.9.0",
+    "redux": "^3.0.0",
+    "socket.io": "^1.3.6",
+    "socket.io-client": "^1.3.6"
+  },
+  "devDependencies": {
+    "babel-eslint": "^4.1.3",
+    "babelify": "^6.3.0",
+    "browserify": "^11.1.0",
+    "eslint": "^1.5.0",
+    "eslint-plugin-react": "^3.4.2",
+    "redux-devtools": "^2.1.2"
+  }
+}

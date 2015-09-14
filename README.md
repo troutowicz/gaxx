@@ -1,2 +1,8 @@
 # gaxx
-A graphical representation of 0day content.
+> A graphical display of 0-day.
+
+## TODO
+* Tests
+
+## License
+[![MIT](https://img.shields.io/badge/license-MIT-blue.svg)](http://troutowicz.mit-license.org)
