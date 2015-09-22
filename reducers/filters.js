@@ -1,18 +1,21 @@
-export function updateFilter(state, action) {
-  const filters = [...state.filters],
-      index = filters.indexOf(action.filter);
+export function queueNewFilter(state, action) {
+  const queuedFilters = [...state.queuedFilters],
+      index = queuedFilters.indexOf(action.filter);
 
   if (index >= 0) {
-    filters.splice(index, 1);
+    queuedFilters.splice(index, 1);
   } else {
-    filters.push(action.filter);
+    queuedFilters.push(action.filter);
   }
 
-  return { ...state, filters };
+  return { ...state, queuedFilters };
 }
 
-export function resetFilters(state, action) {
-  const filters = [...state.categories];
+export function updateFilters(state, action) {
+  const queuedFilters = action.reset || !state.queuedFilters.length
+    ? [...state.categories]
+    : [...state.queuedFilters];
+  const filters = [...queuedFilters];
 
-  return { ...state, filters };
+  return { ...state, filters, queuedFilters };
 }

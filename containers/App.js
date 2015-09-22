@@ -7,7 +7,7 @@ import * as actions from '../actions';
 function mapStateToProps(state) {
   return {
     categories: state.categories,
-    filters: state.filters,
+    filters: state.queuedFilters,
     filteredData: state.filteredData,
   };
 }

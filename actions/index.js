@@ -1,7 +1,7 @@
 export const UPDATE_DATA = 'UPDATE_DATA';
 export const FILTER_DATA = 'FILTER_DATA';
-export const UPDATE_FILTER = 'UPDATE_FILTER';
-export const RESET_FILTERS = 'RESET_FILTERS';
+export const QUEUE_NEW_FILTER = 'QUEUE_NEW_FILTER';
+export const UPDATE_FILTERS = 'UPDATE_FILTERS';
 
 export function updateData(data) {
   return {
@@ -16,15 +16,16 @@ export function filterData() {
   }
 }
 
-export function updateFilter(filter) {
+export function queueNewFilter(filter) {
   return {
-    type: UPDATE_FILTER,
+    type: QUEUE_NEW_FILTER,
     filter,
   };
 }
 
-export function resetFilters() {
+export function updateFilters(reset = false) {
   return {
-    type: RESET_FILTERS,
+    type: UPDATE_FILTERS,
+    reset,
   };
 }
