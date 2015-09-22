@@ -26,19 +26,16 @@ export default stampit(React, {
   },
 
   _onCheckboxClick(e) {
-    this.props.updateFilter(e.target.value);
+    this.props.queueNewFilter(e.target.value);
   },
 
   _onUpdateClick() {
-    if (this.props.filters.length === 0) {
-      this.props.resetFilters();
-    }
-
+    this.props.updateFilters();
     this.props.filterData();
   },
 
   _onResetClick() {
-    this.props.resetFilters();
+    this.props.updateFilters(true);
     this.props.filterData();
   },
 

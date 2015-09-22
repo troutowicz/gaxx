@@ -8,5 +8,6 @@ export default createStore(reducer, {
   data: {},
   filteredData: [],
   filters: categories,
+  queuedFilters: categories,
   redraw: false,
 });
