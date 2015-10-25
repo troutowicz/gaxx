@@ -1,14 +1,16 @@
 body {
+  font-family: "Open Sans", "Segoe WP", "Segoe UI", Helvetica, Arial, sans-serif;
   background-color: #F2F2F2;
+  color: #555;
 }
 
 #title {
-  font-size: 2em;
+  font-size: 4em;
 }
 
 #filterBox {
   position: absolute;
-  top: 60px;
+  top: 130px;
 }
 
 #chart {
